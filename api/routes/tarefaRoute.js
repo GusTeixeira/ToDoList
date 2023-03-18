@@ -8,4 +8,5 @@ router
  .post('/tarefas', TarefaController.criaTarefa)
  .put('/tarefas/:id', TarefaController.atualizaTarefa)
  .delete('/tarefas/:id', TarefaController.apagaTarefa)
+ .get('/usuarios/:usu_id/tarefas',TarefaController.pegaTarefasPorUsuario)
 module.exports = router

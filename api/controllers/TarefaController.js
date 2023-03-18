@@ -67,6 +67,20 @@ class TarefaController{
             return res.status(500).json(error.message)
         }
     }
+
+    static async pegaTarefasPorUsuario(req,res){
+        const {usu_id} = req.params
+        try{
+            const tarefasPorUsuario = await database.Tarefas.findAll({
+                where:{
+                    usu_id:Number(usu_id)
+                }
+            })
+            return res.status(200).json(tarefasPorUsuario)
+        }catch(error){
+            return res.status(500).json(error.message)
+        }
+    }
 }
 
 module.exports = TarefaController
