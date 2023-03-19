@@ -1,0 +1,29 @@
+get started
+    pacotes usados:
+        npm install body-parser
+        npm install express
+        npm install sequelize
+        npm install sequelize-cli
+        npm install pg pg-hstore
+        npm install path
+        npm install morgan
+    pacotes para dev:
+        npm install --save-dev(salvar apenas para dev) nodemon
+
+comandos importantes sequelize-cli
+    iniciar ambiente sequelize/orm:npx sequelize-cli init
+    prestar atenção no arquivo .sequelizerc para configurar o caminho das pastas
+    exemplo de modelo: npx sequelize-cli model:create --name Pessoas --atributer nome:string, ativo:boolean, email:string
+    migrar as alterações para o banco: npx sequelize-cli db:migrate
+    desfazer a ultima migração feita: npx sequelize-cli db:migrate:undo
+    desfazer uma migração especifica: npx sequelize-cli db:migrate:undo --name [data-hora]-create-[nome-da-tabela].js
+    inserir configurações do banco em config.json
+    criar um novo arquivo seed(arquivo para popular o banco): npx sequelize-cli seed:generate –name demo-pessoa
+    executar o arquivo de seed e popular o banco com as informações nele: npx sequelize-cli db:seed:all
+    limpar as seeds do banco: npx sequelize db:seed:undo:all
+    desfazer seeds de uma tabela especifica: npx sequelize-cli db:seed:undo --seed nome-do-arquivo
+    limpar a ultima seed feita: npx sequelize db:seed:undo
+
+    
+
+

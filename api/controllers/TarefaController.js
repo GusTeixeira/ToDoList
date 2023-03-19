@@ -1,4 +1,5 @@
 const database = require ('../models')
+const { Op } = require("sequelize");
 
 class TarefaController{
     static async pegaTarefa(req, res){
